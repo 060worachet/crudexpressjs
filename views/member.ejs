@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJs</title>
+</head>
+<body>
+    <table width = "800" border = "1">
+        <thead>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>price</th>
+        </thead>
+        <tbody>
+            <% if (resultsPerson.length > 0) { %>
+                <% resultsPerson.forEach (function(recordPerson) { %>
+                    <tr>
+                        <td>
+                            <%= recordPerson.id %>
+                        </td>
+                        <td>
+                            <%= recordPerson.name %>
+                        </td>
+                        <td>
+                            <%= recordPerson.surname %>
+                        </td>
+                        <td>
+                            <%= recordPerson.price %>
+                        </td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan = "100%">- ไม่มีข้อมูล -</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <p></p>
+    <input type="button" onclick="location.href='/login';" value="Go to login page" />
+    <p></p>
+    <input type="button" onclick="location.href='/';" value="Go to home page" />
+</body>
+</html>

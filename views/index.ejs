@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='css/mycss.css' />
+  </head>
+  <body>
+    <h1>GET</h1>
+    <p>localhost:3000/crud/get</p>
+    <h1>POST</h1>
+    <p>http://localhost:3000/crud/post</p>
+    <p>ตัวอย่าง</p>
+    <p>
+      {
+        "name": "wo",
+        "surname": "rpk",
+        "price": "0980"
+    }
+    </p>
+    <h1>UPDATE & PATCH</h1>
+    <p>localhost:3000/crud/update/(?ID)</p>
+    <p>ตัวอย่าง</p>
+    <p>
+      {
+      "newprice" : "5544"
+  }
+</p>
+<h1>DELETE</h1>
+<p>localhost:3000/crud/delete/(?ID)</p>
+
+    <p></p>
+    <input type="button" onclick="location.href='/login';" value="Go to login page" />
+    <p></p>
+    <input type="button" onclick="location.href='/member';" value="Go to member page" />
+
+
+  </body>
+</html>
