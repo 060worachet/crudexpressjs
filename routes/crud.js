@@ -36,7 +36,10 @@ router.post("/crud/post",async (req,res) => {
                     console.log("Erro while insert user to database", err);
                     return res.status(400).send();
                 }
-                return res.status(201).json({message: "new user create successfully"});
+                //return res.status(201).json({message: "new user create successfully"});
+                //return res.render('http://localhost:3000/');
+                return res.redirect('http://localhost:3000/member');
+
 
             }
         )
@@ -66,7 +69,7 @@ router.get("/crud/get",async(req, res)=> {
 
 //patch
 router.patch("/crud/update/:id",async (req,res) => {
-    const id = req.params.id;
+    const id = req.body.id;
     const newprice = req.body.newprice;
     try{
         connection.query("UPDATE member SET price = ? WHERE id = ?",[newprice,id],(err,result,fields) =>{
